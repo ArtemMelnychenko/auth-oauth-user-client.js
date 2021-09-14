@@ -12,6 +12,9 @@ jobs:
     strategy:
       matrix:
         node_version: ["12", "14"]
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - uses: actions/checkout@v2
